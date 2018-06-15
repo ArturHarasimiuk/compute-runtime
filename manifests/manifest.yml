@@ -24,13 +24,6 @@ components:
     dest_dir: internal
     revision: 66b31e46172f33de0430bae58e01471670991f0f
     type: git
-  khronos:
-    branch: master
-    clean_on_sync: true
-    dest_dir: khronos
-    repository: https://github.com/KhronosGroup/OpenCL-Headers.git
-    revision: de26592167b9fdea503885e40e8755393c56523d
-    type: git
   kmdaf:
     branch: kmdaf
     clean_on_sync: true
