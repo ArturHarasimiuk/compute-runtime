@@ -4,7 +4,7 @@ components:
     clean_on_sync: true
     dest_dir: gmmlib
     repository: https://github.com/intel/gmmlib.git
-    revision: 3f3138424bb21ebf5de105226b85630f4f69dbf6
+    revision: 5ff84b923ec2ba1572c464dc8def73348571b440
     type: git
   igc:
     branch: igc
@@ -23,13 +23,6 @@ components:
     branch: master
     dest_dir: internal
     revision: 66b31e46172f33de0430bae58e01471670991f0f
-    type: git
-  khronos:
-    branch: master
-    clean_on_sync: true
-    dest_dir: khronos
-    repository: https://github.com/KhronosGroup/OpenCL-Headers.git
-    revision: de26592167b9fdea503885e40e8755393c56523d
     type: git
   kmdaf:
     branch: kmdaf
