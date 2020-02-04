@@ -1,0 +1,29 @@
+name: verify
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        compiler: [gcc-5, gcc-6, gcc-7, gcc-8, gcc-9]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: neo
+    - name: prepare image
+      env:
+        BUILD_OS: ubuntu-18.04
+        COMPILER: ${{ matrix.compiler }}
+      run: |
+        cd neo/scripts
+        ./run-action-build.sh
+    - name: build
+      env:
+        BUILD_OS: ubuntu-18.04
+        COMPILER: ${{ matrix.compiler }}
+      container: neo-ubuntu-18.04-${{ matrix.compiler }}
+      run: |
+        pwd
+        ls -la
+        cd neo/scripts
